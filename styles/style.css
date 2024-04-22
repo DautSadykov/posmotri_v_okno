@@ -46,6 +46,7 @@ fieldset {
 } 
 
 .button {
+  padding: 5px 0;
   background-color: transparent;
   color: white;
   border: 1px solid #fff;
@@ -62,7 +63,7 @@ fieldset {
   background-color: #545050;
 }
 
-.button:focus {
+.button:focus-visible {
   outline-offset: 1px;
   outline: 1px solid #fff;
 }
@@ -103,6 +104,8 @@ fieldset {
 }
 
 .result__video-container video {
+  object-fit: cover;
+  object-position: center;
   width: 100%;
   height: 100%;
 }
@@ -149,7 +152,7 @@ fieldset {
 }
 
 .search-form__textfield::placeholder {
-  color: white;
+  color: #bbbaba;
   font-family: inherit;
 }
 
@@ -193,7 +196,6 @@ fieldset {
 
 .search-form__submit-button {
   width: 210px;
-  height: 34px;
 }
 
 .content__details {
@@ -218,12 +220,16 @@ fieldset {
 }
 
 .content__list {
-  overflow: auto;
   position: relative;
+  overflow-y: scroll;
 }
 
 .content__list li:not(:last-child) {
   margin-bottom: 30px;
+}
+
+.content__list-item {
+  width: 395px;
 }
 
 .content__card-link {
@@ -236,8 +242,12 @@ fieldset {
   outline: none;
 }
 
-.content__card-link_current:focus {
+.content__card-link:focus-visible {
   outline: 1px solid #fff;
+}
+
+.content__card-link_current {
+  background-color: #545050;
 }
 
 .content__video-card {
@@ -275,6 +285,6 @@ fieldset {
 }
 
 .more-button {
-  width: 100%;
-  height: 34px;
+  width: 390px;
+  margin: 2px;
 }
